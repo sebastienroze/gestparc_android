@@ -1,0 +1,76 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ActivityEditionDocument">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        android:text="Document"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_nomDocument"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:ems="10"
+        android:hint="nom"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/button_document_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/prendre_photo"
+        android:textAlignment="center"
+        app:cornerRadius="@android:dimen/app_icon_size"
+        app:icon="@drawable/ic_baseline_add_a_photo_24"
+        app:iconSize="@android:dimen/app_icon_size"
+        app:layout_constraintTop_toBottomOf="@+id/editText_nomDocument"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+
+    <Button
+        android:id="@+id/button_document_contenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/voir_contenu"
+        android:textAlignment="center"
+        app:cornerRadius="@android:dimen/app_icon_size"
+        app:icon="@drawable/ic_baseline_preview_24"
+        app:iconSize="@android:dimen/app_icon_size"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_document_photo"
+        />
+    <Button
+        android:id="@+id/button_document_validerDocument"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valider"
+        android:textAlignment="center"
+        app:cornerRadius="@android:dimen/app_icon_size"
+        app:icon="@drawable/ic_done"
+        app:iconSize="@android:dimen/app_icon_size"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_document_contenu"
+         />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
